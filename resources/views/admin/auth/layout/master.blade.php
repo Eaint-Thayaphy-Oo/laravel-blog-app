@@ -8,16 +8,16 @@
     <meta name="author" content="Creative Tim">
     <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
     <!-- Favicon -->
-    <link rel="icon" href={{ assets('assets/img/brand/favicon.png') }} type="image/png">
+    <link rel="icon" href={{ asset('assets/img/brand/favicon.png') }} type="image/png">
     <!-- Fonts -->
-    <link rel="stylesheet" href={{ assets('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700') }}>
+    <link rel="stylesheet" href={{ asset('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700') }}>
     <!-- Icons -->
-    <link rel="stylesheet" href={{ assets('assets/vendor/nucleo/css/nucleo.css') }} type="text/css">
-    <link rel="stylesheet" href={{ assets('assets/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}
+    <link rel="stylesheet" href={{ asset('assets/vendor/nucleo/css/nucleo.css') }} type="text/css">
+    <link rel="stylesheet" href={{ asset('assets/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}
         type="text/css">
     <!-- Page plugins -->
     <!-- Argon CSS -->
-    <link rel="stylesheet" href={{ assets('assets/css/argon.css?v=1.2.0') }} type="text/css">
+    <link rel="stylesheet" href={{ asset('assets/css/argon.css?v=1.2.0') }} type="text/css">
 </head>
 
 <body>
@@ -27,7 +27,7 @@
             <!-- Brand -->
             <div class="sidenav-header  align-items-center">
                 <a class="navbar-brand" href="javascript:void(0)">
-                    <img src={{ assets('assets/img/brand/blue.png') }} class="navbar-brand-img" alt="...">
+                    <img src={{ asset('assets/img/brand/blue.png') }} class="navbar-brand-img" alt="...">
                 </a>
             </div>
             <div class="navbar-inner">
@@ -58,7 +58,7 @@
                     <ul class="navbar-nav mb-md-3">
                         <li class="nav-item">
                             <a class="nav-link"
-                                href={{ assets('https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html') }}
+                                href={{ asset('https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html') }}
                                 target="_blank">
                                 <i class="ni ni-spaceship"></i>
                                 <span class="nav-link-text">Getting started</span>
@@ -85,7 +85,7 @@
                                 aria-haspopup="true" aria-expanded="false">
                                 <div class="media align-items-center">
                                     <span class="avatar avatar-sm rounded-circle">
-                                        <img alt="Image placeholder" src="assets/img/theme/team-4.jpg">
+                                        <img alt="Image placeholder" src={{ asset('assets/img/theme/team-4.jpg') }}>
                                     </span>
                                     <div class="media-body  ml-2  d-none d-lg-block">
                                         <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
@@ -98,7 +98,7 @@
                                 </div>
 
                                 <div class="dropdown-divider"></div>
-                                <a href="#!" class="dropdown-item">
+                                <a href="{{ url('/admin/logout') }}" class="dropdown-item">
                                     <i class="ni ni-user-run"></i>
                                     <span>Logout</span>
                                 </a>
@@ -112,23 +112,23 @@
         <!-- Header -->
         <div class="header p-3">
             <div class="card p-2">
-                <h1>Content Here</h1>
+                @yield('content')
             </div>
         </div>
 
     </div>
     <!-- Argon Scripts -->
     <!-- Core -->
-    <script src={{ assets('assets/vendor/jquery/dist/jquery.min.js') }}></script>
-    <script src={{ assets('assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}></script>
-    <script src={{ assets('assets/vendor/js-cookie/js.cookie.js') }}></script>
-    <script src={{ assets('assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js') }}></script>
-    <script src={{ assets('assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js') }}></script>
+    <script src={{ asset('assets/vendor/jquery/dist/jquery.min.js') }}></script>
+    <script src={{ asset('assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}></script>
+    <script src={{ asset('assets/vendor/js-cookie/js.cookie.js') }}></script>
+    <script src={{ asset('assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js') }}></script>
+    <script src={{ asset('assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js') }}></script>
     <!-- Optional JS -->
-    <script src={{ assets('assets/vendor/chart.js/dist/Chart.min.js') }}></script>
-    <script src={{ assets('assets/vendor/chart.js/dist/Chart.extension.js') }}></script>
+    <script src={{ asset('assets/vendor/chart.js/dist/Chart.min.js') }}></script>
+    <script src={{ asset('assets/vendor/chart.js/dist/Chart.extension.js') }}></script>
     <!-- Argon JS -->
-    <script src={{ assets('assets/js/argon.js?v=1.2.0') }}></script>
+    <script src={{ asset('assets/js/argon.js?v=1.2.0') }}></script>
 </body>
 
 </html>

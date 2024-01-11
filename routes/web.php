@@ -18,6 +18,7 @@ Route::get('/admin/login', 'Admin\AuthController@showLogin');
 
 Route::post('/admin/login', 'Admin\AuthController@login');
 
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin', 'middleware' => 'RedirectIfNotAdmin'], function () {
     Route::get('/', 'PageController@dashboard');
+    Route::get('/logout', 'AuthController@logout');
 });
