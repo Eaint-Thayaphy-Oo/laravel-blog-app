@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Admin Route
+Route::get('/admin/login', 'Admin\AuthController@showLogin');
+
+Route::post('/admin/login', 'Admin\AuthController@login');
+
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin'], function () {
+    Route::get('/', 'PageController@dashboard');
 });

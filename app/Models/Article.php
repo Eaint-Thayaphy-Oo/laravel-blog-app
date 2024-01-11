@@ -10,4 +10,19 @@ class Article extends Model
     use HasFactory;
 
     protected $fillable = ['name', 'image', 'description', 'like_count', 'view_count'];
+
+    public function comment()
+    {
+        return $this->hasMany(ArticleComment::class);
+    }
+
+    public function tag()
+    {
+        return $this->belongsToMany(Tag::class, 'article_tag');
+    }
+
+    public function programming()
+    {
+        return $this->belongsToMany(Programming::class, 'article_programming');
+    }
 }
