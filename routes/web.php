@@ -14,11 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Admin Route
-Route::get('/admin/login', 'Admin\AuthController@showLogin');
+// Route::get('/admin/login', 'Admin\AuthController@showLogin');
+Route::get('/', 'Admin\AuthController@showLogin');
 
 Route::post('/admin/login', 'Admin\AuthController@login');
 
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin', 'middleware' => 'RedirectIfNotAdmin'], function () {
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.', 'middleware' => 'RedirectIfNotAdmin'], function () {
     Route::get('/', 'PageController@dashboard');
     Route::get('/logout', 'AuthController@logout');
+    Route::resource('/programming', 'ProgrammingController');
 });
