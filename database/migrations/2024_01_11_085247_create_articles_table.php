@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('slug')->unique();
             $table->string('name');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->longText('description');
             $table->integer('like_count');
             $table->integer('view_count');

@@ -76,7 +76,8 @@
         </div>
         <div class="form-group">
             <label for="">Image</label>
-            <img src="{{ asset('/images/' . $data->image) }}" width="200px" class="img-thumbnail">
+            <img src="{{ asset('/images/' . $data->image) }}" width="200px" class="img-thumbnail" />
+            <input type="file" name="new_image" class="form-control-file mt-2">
         </div>
         <div class="form-group">
             <label for="">Description</label>
