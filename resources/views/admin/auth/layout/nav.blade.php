@@ -23,6 +23,12 @@
                             <span class="nav-link-text">Programming</span>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.article.index') }}">
+                            <i class="ni ni-align-center text-orange"></i>
+                            <span class="nav-link-text">Article</span>
+                        </a>
+                    </li>
                 </ul>
                 <!-- Divider -->
                 <hr class="my-3">

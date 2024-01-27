@@ -23,4 +23,5 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.', 'mi
     Route::get('/', 'PageController@dashboard');
     Route::get('/logout', 'AuthController@logout');
     Route::resource('/programming', 'ProgrammingController');
+    Route::resource('/article', 'ArticleController');
 });
